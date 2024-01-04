@@ -34,5 +34,8 @@ urlpatterns = [
 
 ###########PALCE ORDER
     path('cart/placeorder/',views.placeorder,name='placeorder'),
+
+    # receipt 
+    path('receipt/',views.receipt, name='receipt'),
  ]
 

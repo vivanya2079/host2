@@ -310,3 +310,33 @@ def placeorder(request):
 #         # )
 #         # order.save()
 #     return render(request,'place.html')
+
+
+def receipt(request):
+    totalAmount = calculateTotalAmount(request)  # Pass the request object to the function
+    response = get_payment_response()  # Implement this function to get the Razorpay payment response
+
+    context = {
+        'totalAmount': totalAmount,
+        'response': response,
+    }
+
+    return render(request, 'receipt.html', context)
+
+
+def calculateTotalAmount(request):
+    # Ensure that the quantities and prices are converted to integers before performing calculations
+    totalAmount = 0
+    for key, value in request.session.get('cart', {}).items():
+        totalAmount += int(value['price']) * int(value['quantity'])
+    return totalAmount
+
+def get_payment_response():
+    # Implement your logic to get the Razorpay payment response
+    # This can include fetching data from the payment gateway or any other source
+    # For demonstration purposes, a dummy response is returned
+    return {
+        'razorpay_payment_id': 'rzp_test_84GzG9wYFi8XR6',
+        'razorpay_order_id': 'mp6yYCFio2JMAOjkM90Er5Ix',
+        
+    }

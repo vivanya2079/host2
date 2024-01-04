@@ -130,8 +130,8 @@ MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 
 # settings.py
 
-RAZORPAY_KEY_ID = 'rzp_test_i4e20xxg2h64Pb'
-RAZORPAY_KEY_SECRECT= 'c8ruCexrQ3BmijMGFNNrzEbF'
+RAZORPAY_KEY_ID = 'rzp_test_84GzG9wYFi8XR6'
+RAZORPAY_KEY_SECRECT= 'mp6yYCFio2JMAOjkM90Er5Ix'
 
 
 

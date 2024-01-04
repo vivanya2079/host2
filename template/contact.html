@@ -1,9 +1,78 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+<style>
+    /* Basic styles for the contact area */
+.contact-area {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.contact-title h2.title {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    padding: 15px 25px;
+    background-color: #0a0d0f;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+.single-contact {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.icon-box {
+    margin-right: 15px;
+}
+
+.icon-box img {
+    max-width: 50px;
+}
+
+.info-box p {
+    margin-bottom: 10px;
+}
+
+.info-box a {
+    color: #0a0d0f;
+    text-decoration: none;
+}
+
+.info-box a:hover {
+    text-decoration: underline;
+}
+
+</style>
 <div class="contact-area">
-    <div class="container">
+    <div class="container " sy>
         <div class="contact-wrapper">
             <div class="row">
                 <div class="col-12">
